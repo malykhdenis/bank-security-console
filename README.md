@@ -3,12 +3,12 @@
 ## Установка
 Клонируем репозиторий:
 ```
-git clone https://github.com/malykhdenis/dvmn_django-orm-watching-storage/
+git clone https://github.com/malykhdenis/bank-security-console.git
 ```
 
 Переходим в папку с проектом:
 ```
-cd dvmn_django-orm-watching-storage
+cd bank-security-console
 ```
 
 Устанавливаем и активируем venv:
@@ -28,6 +28,14 @@ python3 -m pip install --upgrade pip
 Устанавливаем зависимости:
 ```
 pip install -r requirements.txt
+```
+
+Создаем файл .env и заполняем его переменными как в примере:
+```
+DATABASES='postgres://USER:PASSWORD@HOST:PORT/NAME' # Шаблон заполнить своими параметрами
+DEBUG=True  # Указать True или False
+SECRET_KEY='django_secret_key'  # Указать свой Django secret key
+ALLOWED_HOST=127.0.0.1,10.0.0.1,example.com  # Заполнить своими хостами
 ```
 
 Запускаем проект:
